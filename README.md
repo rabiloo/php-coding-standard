@@ -1,13 +1,10 @@
-# php-coding-standard
+# PHP Coding Standard
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/rabiloo/php-coding-standard.svg)](https://packagist.org/packages/rabiloo/php-coding-standard)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/rabiloo/coding-standard.svg)](https://packagist.org/packages/rabiloo/coding-standard)
 [![Tests](https://github.com/rabiloo/php-coding-standard/actions/workflows/run-tests.yml/badge.svg)](https://github.com/rabiloo/php-coding-standard/actions/workflows/run-tests.yml)
-[![Total Downloads](https://img.shields.io/packagist/dt/rabiloo/php-coding-standard.svg)](https://packagist.org/packages/rabiloo/php-coding-standard)
+[![Total Downloads](https://img.shields.io/packagist/dt/rabiloo/coding-standard.svg)](https://packagist.org/packages/rabiloo/coding-standard)
 
-
-This is my package php-coding-standard
-
-This is where your description should go. Try and limit it to a paragraph or two. Consider adding a small example.
+Rabiloo's PHP coding standard
 
 ## Installation
 

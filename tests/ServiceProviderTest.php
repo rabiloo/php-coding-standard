@@ -35,8 +35,6 @@ class ServiceProviderTest extends TestCase
             '--tag' => 'rabiloo-coding-standard',
         ]);
 
-        sleep(2);
-
         foreach ($files as $sourceFile => $targetFile) {
             $this->assertFileExists($targetFile);
             $this->assertEquals(file_get_contents($sourceFile), file_get_contents($targetFile));
