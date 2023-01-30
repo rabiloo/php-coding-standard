@@ -1,12 +1,12 @@
 # User specific & automatically generated files #
 #################################################
-composer.lock
-vendor
-.phpunit.result.cache
-phpunit.xml
-phpcs.xml
-psalm.xml
-build
+/composer.lock
+/vendor
+/.phpunit.result.cache
+/phpunit.xml
+/phpcs.xml
+/psalm.xml
+/build
 *.log
 
 # IDE and editor specific files #
