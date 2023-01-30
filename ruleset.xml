@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- @see https://pear.php.net/manual/en/package.php.php-codesniffer.annotated-ruleset.php -->
+<ruleset
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    name="Rabiloo"
+    namespace="Rabiloo\CodingStandard"
+    xsi:noNamespaceSchemaLocation="vendor/squizlabs/php_codesniffer/phpcs.xsd"
+>
+    <description>Rabiloo's PHP coding standard</description>
+
+    <!-- Inherit rules from: PSR12-->
+    <rule ref="PSR12"/>
+
+    <!-- You SHOULD use short array syntax -->
+    <rule ref="Generic.Arrays.DisallowLongArraySyntax">
+        <type>warning</type>
+    </rule>
+
+    <!-- You SHOULD fix all TODO and FIXME markers -->
+    <rule ref="Generic.Commenting.Fixme">
+        <type>warning</type>
+    </rule>
+    <rule ref="Generic.Commenting.Todo">
+        <type>warning</type>
+    </rule>
+
+    <!-- You MUST NOT use deprecated functions -->
+    <rule ref="Generic.PHP.DeprecatedFunctions"/>
+
+    <!-- You SHOULD comment if method or function has exception -->
+    <rule ref="Squiz.Commenting.FunctionCommentThrowTag">
+        <type>warning</type>
+    </rule>
+</ruleset>

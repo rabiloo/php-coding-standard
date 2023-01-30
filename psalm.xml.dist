@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <psalm
+    xmlns="https://getpsalm.org/schema/config"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
     errorLevel="4"
     findUnusedVariablesAndParams="true"
+    findUnusedBaselineEntry="false"
+    findUnusedCode="false"
     resolveFromConfigFile="true"
 >
     <projectFiles>
@@ -12,4 +15,7 @@
             <directory name="vendor"/>
         </ignoreFiles>
     </projectFiles>
+    <plugins>
+        <pluginClass class="Psalm\LaravelPlugin\Plugin"/>
+    </plugins>
 </psalm>

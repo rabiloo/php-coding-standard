@@ -1,19 +1,11 @@
-# package_name
+# php-coding-standard
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/vendor_slug/package_slug.svg)](https://packagist.org/packages/vendor_slug/package_slug)
-[![Tests](https://github.com/vendor_slug/package_slug/actions/workflows/run-tests.yml/badge.svg)](https://github.com/vendor_slug/package_slug/actions/workflows/run-tests.yml)
-[![Total Downloads](https://img.shields.io/packagist/dt/vendor_slug/package_slug.svg)](https://packagist.org/packages/vendor_slug/package_slug)
-<!--delete-->
----
-This package can be used as to scaffold a framework agnostic package. Follow these steps to get started:
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/rabiloo/php-coding-standard.svg)](https://packagist.org/packages/rabiloo/php-coding-standard)
+[![Tests](https://github.com/rabiloo/php-coding-standard/actions/workflows/run-tests.yml/badge.svg)](https://github.com/rabiloo/php-coding-standard/actions/workflows/run-tests.yml)
+[![Total Downloads](https://img.shields.io/packagist/dt/rabiloo/php-coding-standard.svg)](https://packagist.org/packages/rabiloo/php-coding-standard)
 
-1. Press the "Use template" button at the top of this repo to create a new repo with the contents of this skeleton
-2. Run "php ./configure.php" to run a script that will replace all placeholders throughout all the files
-3. Have fun creating your package.
----
-<!--/delete-->
 
-package_description
+This is my package php-coding-standard
 
 This is where your description should go. Try and limit it to a paragraph or two. Consider adding a small example.
 
@@ -22,20 +14,44 @@ This is where your description should go. Try and limit it to a paragraph or two
 You can install the package via composer:
 
 ```bash
-composer require vendor_slug/package_slug
+composer require rabiloo/coding-standard --dev
 ```
 
-## Usage
+Add it to your project `phpcs.xml` or `phpcs.xml.dist` ruleset:
 
-```php
-$skeleton = new \VendorNamespace\PackageNamespace\Skeleton();
-var_dump($skeleton);
+```
+<?xml version="1.0"?>
+<ruleset>
+    <arg value="p"/>
+    <arg value= "s"/>
+    <arg name="colors"/>
+
+    <file>app</file>
+    <file>bootstrap</file>
+    <file>config</file>
+    <file>database</file>
+    <file>lang</file>
+    <file>routes</file>
+    <file>tests</file>
+    <file>public</file>
+
+    <exclude-pattern>*/*.js</exclude-pattern>
+    <exclude-pattern>*/*.css</exclude-pattern>
+    <exclude-pattern>*/*.xml</exclude-pattern>
+    <exclude-pattern>*/*.blade.php</exclude-pattern>
+    <exclude-pattern>bootstrap/cache</exclude-pattern>
+
+    <rule ref="./vendor/rabiloo/coding-standard/ruleset.xml"/>
+</ruleset>
 ```
 
-## Testing
+### Laravel
+
+If you use it with Laravel project, you can install by commands
 
 ```bash
-composer test
+composer require rabiloo/coding-standard --dev
+php artisan vendor:publish --tag rabiloo-coding-standard
 ```
 
 ## Changelog
@@ -52,7 +68,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [author_name](https://github.com/author_username)
+- [Oanh Nguyen](https://github.com/oanhnn)
 - [All Contributors](../../contributors)
 
 ## License
