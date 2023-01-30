@@ -1,0 +1,34 @@
+name: Run tests
+
+on:
+  push:
+    branches:
+      - master
+      - develop
+  pull_request:
+    branches:
+      - master
+      - develop
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: Test install
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+          tools: composer
+
+      - name: Execute test
+        run: |
+          composer create-project laravel/laravel test-project
+          cd test-project
+          composer require rabiloo/coding-standard --dev
+          ls -la
+          php artisan vendor:publish --tag rabiloo-coding-standard
+          ls -la
