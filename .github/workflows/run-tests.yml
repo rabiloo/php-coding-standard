@@ -56,5 +56,4 @@ jobs:
       - name: Execute tests
         run: |
           ls -la ./vendor/orchestra/testbench-core/laravel
-          ./vendor/bin/phpunit --debug || exit 0
-          ls -la ./vendor/orchestra/testbench-core/laravel
+          ./vendor/bin/phpunit --debug || ls -la ./vendor/orchestra/testbench-core/laravel
